@@ -10,14 +10,13 @@ int main(){
     cout << "введите n да побольше" << endl;
     cin >> n;
     for (int i = 0; i < n + 1; i++){
-        x = 2 * (double) rand() / RAND_MAX;
-        y = (double) rand() / RAND_MAX;
+        x = (double) rand() / RAND_MAX;
+        y = (double) 2 * rand() / RAND_MAX;
         y2 = -1 * x  * x + 2;
         if (x <= y && y <= y2){
             cnt_in += 1;
         }
     }
-    s = 2; 
     s_sektor = ((float) cnt_in / n) * 4;
     cout << s_sektor << endl;
     return 0;
